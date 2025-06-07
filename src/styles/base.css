@@ -1,3 +1,5 @@
+/********** CSS VARIABLES ************/
+
 :root {
   /* 🎨 Colors */
 
@@ -26,7 +28,7 @@
   --blue-200: #23bfd8;
   --blue-300: #233e58;
 
-  /* 🧱 Spacing */
+  /* Spacing */
   --space-xxs: 0.4rem; /* 4px */
   --space-xs: 0.8rem; /* 8px */
   --space-sm: 1.2rem; /* 12px */
@@ -36,7 +38,7 @@
   --space-2xl: 4.8rem; /* 48px */
   --space-3xl: 6.4rem; /* 48px */
 
-  /* ✍️ Typography */
+  /* Typography */
   --font-header: 'Co Headline', system-ui, sans-serif;
   --font-body: 'Poppins', system-ui, sans-serif;
 
@@ -51,30 +53,44 @@
   --font-header-lg: 3.6rem;
   --font-header-xl: 6rem;
 
-  /* 🔤 Font weights */
+  /* Font weights */
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
 
-  /* 🌐 Line heights */
+  /* Line heights */
   --line-height-tight: 1.2;
   --line-height-normal: 1.5;
   --line-height-loose: 1.75;
+
+  /* Rounded Corners */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --border-radius-xl: 50px;
+
+  /* Drop Shadows */
+  --shadow-shallow: 0 1px 2px hsla(0, 24%, 8%, 0.2),
+    0 1px 3px hsla(0, 24%, 8%, 0.2);
+  --shadow-mid: 0 3px 6px hsla(0, 24%, 8%, 0.2),
+    0 10px 20px hsla(0, 24%, 8%, 0.2);
+  --shadow-deep: 0 3px 10px hsla(0, 24%, 8%, 0.2),
+    0 5px 40px hsla(0, 24%, 8%, 0.2);
 }
 
-/* 1. Use a more-intuitive box-sizing model */
+/********** CSS RESET ************/
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* 2. Remove default margin */
 * {
   margin: 0;
 }
 
-/* 3. Enable keyword animations */
+/* Enable keyword animations */
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;
@@ -87,13 +103,10 @@ html {
 }
 
 body {
-  /* 4. Add accessible line-height */
   line-height: 1.5;
-  /* 5. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
 
-/* 6. Improve media defaults */
 img,
 picture,
 video,
@@ -103,7 +116,7 @@ svg {
   max-width: 100%;
 }
 
-/* 7. Inherit fonts for form controls */
+/* Inherit fonts for form controls */
 input,
 button,
 textarea,
@@ -111,7 +124,7 @@ select {
   font: inherit;
 }
 
-/* 8. Avoid text overflows */
+/* Avoid text overflows */
 p,
 h1,
 h2,
@@ -122,7 +135,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* 9. Improve line wrapping */
+/* Improve line wrapping */
 p {
   text-wrap: pretty;
 }
@@ -136,7 +149,7 @@ h6 {
 }
 
 /*
-  10. Create a root stacking context
+  Create a root stacking context
 */
 #root,
 #__next {
