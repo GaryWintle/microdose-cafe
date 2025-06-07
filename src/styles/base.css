@@ -1,0 +1,152 @@
+:root {
+  /* 🎨 Colors */
+
+  /* Neutrals */
+  --neutral-100: hsl(40, 100%, 99%);
+  --neutral-200: hsl(40, 23%, 97%);
+  --neutral-300: hsl(0, 2%, 92%);
+  --neutral-400: hsl(30, 3%, 85%);
+  --neutral-500: hsl(300, 1%, 62%);
+  --neutral-600: hsl(317, 4%, 37%);
+  --neutral-700: hsl(338, 8%, 20%);
+  --neutral-800: hsl(0, 24%, 8%);
+
+  /* Yellows */
+  --yellow-100: #f6f6a7;
+  --yellow-200: #fbd916;
+  --yellow-300: #ae7b2d;
+
+  /* Pinks */
+  --pink-100: #f7c4f0;
+  --pink-200: #ef468b;
+  --pink-300: #971c59;
+
+  /* Bluess */
+  --blue-100: #9eeaf0;
+  --blue-200: #23bfd8;
+  --blue-300: #233e58;
+
+  /* 🧱 Spacing */
+  --space-xxs: 0.4rem; /* 4px */
+  --space-xs: 0.8rem; /* 8px */
+  --space-sm: 1.2rem; /* 12px */
+  --space-md: 1.6rem; /* 16px */
+  --space-lg: 2.4rem; /* 24px */
+  --space-xl: 3.2rem; /* 32px */
+  --space-2xl: 4.8rem; /* 48px */
+  --space-3xl: 6.4rem; /* 48px */
+
+  /* ✍️ Typography */
+  --font-header: 'Co Headline', system-ui, sans-serif;
+  --font-body: 'Poppins', system-ui, sans-serif;
+
+  --font-body-xs: 1.2rem;
+  --font-body-sm: 1.4rem;
+  --font-body-md: 1.6rem;
+  --font-body-lg: 2rem;
+  --font-body-xl: 2.4rem;
+
+  --font-header-sm: 1.8rem;
+  --font-header-md: 2.4rem;
+  --font-header-lg: 3.6rem;
+  --font-header-xl: 6rem;
+
+  /* 🔤 Font weights */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+
+  /* 🌐 Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.75;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: none;
+}
