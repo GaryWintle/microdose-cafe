@@ -1,0 +1,34 @@
+.hero {
+  position: relative;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* vertical centering */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* hides video overflow */
+}
+
+.hero video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* important! */
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container {
+  z-index: 1; /* make sure content appears above video */
+  width: min(70%, var(--max-width));
+  text-align: center;
+}
+
+h1 {
+  font-family: var(--font-header);
+  font-size: var(--font-header-xl);
+  color: var(--neutral-100);
+  line-height: var(--line-height-tight);
+}

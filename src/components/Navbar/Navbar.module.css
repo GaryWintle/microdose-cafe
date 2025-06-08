@@ -10,6 +10,7 @@ nav {
   background-color: var(--neutral-800);
   margin: var(--space-xl) auto;
   position: relative;
+  position: absolute;
   z-index: auto;
 }
 

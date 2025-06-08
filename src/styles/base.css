@@ -103,7 +103,7 @@
   --font-weight-bold: 700;
 
   /* Line heights */
-  --line-height-tight: 1.2;
+  --line-height-tight: 1.1;
   --line-height-normal: 1.5;
   --line-height-loose: 1.75;
 
@@ -122,7 +122,7 @@
     0 5px 40px hsla(0, 24%, 8%, 0.2);
 }
 
-********* CSS RESET ***********
+/* ********* CSS RESET *********** */
 
 /* debugger */
 /* * {
