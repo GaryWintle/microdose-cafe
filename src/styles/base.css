@@ -1,7 +1,36 @@
+/********** Fonts ************/
+
+@font-face {
+  font-family: 'Co Headline';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local('Co Headline Regular'),
+    url('/fonts/CoHeadline/Co Headline.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Co Headline';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local('Co Headline Light'),
+    url('/fonts/CoHeadline/Co Headline Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Co Headline';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: local('Co Headline Bold'),
+    url('/fonts/CoHeadline/Co Headline Bold.woff') format('woff');
+}
+
 /********** CSS VARIABLES ************/
 
 :root {
-  /* 🎨 Colors */
+  /* Colors */
 
   /* Neutrals */
   --neutral-100: hsl(40, 100%, 99%);
@@ -14,19 +43,32 @@
   --neutral-800: hsl(0, 24%, 8%);
 
   /* Yellows */
-  --yellow-100: #f6f6a7;
-  --yellow-200: #fbd916;
-  --yellow-300: #ae7b2d;
+  --yellow-100: hsl(60, 81%, 81%);
+  --yellow-200: hsl(51, 97%, 54%);
+  --yellow-300: hsl(36, 59%, 43%);
 
   /* Pinks */
-  --pink-100: #f7c4f0;
-  --pink-200: #ef468b;
-  --pink-300: #971c59;
+  --pink-100: hsl(308, 76%, 87%);
+  --pink-150: hsl(336, 100%, 67%);
+  --pink-200: hsl(336, 84%, 61%);
+  --pink-300: hsl(330, 69%, 35%);
 
-  /* Bluess */
-  --blue-100: #9eeaf0;
-  --blue-200: #23bfd8;
-  --blue-300: #233e58;
+  /* Blues */
+  --blue-100: hsl(184, 73%, 78%);
+  --blue-150: hsl(188, 80%, 60%);
+  --blue-200: hsl(188, 72%, 49%);
+  --blue-300: hsl(209, 43%, 24%);
+
+  /* Gradients */
+  --gradient-linear-01: linear-gradient(
+    90deg,
+    var(--yellow-200) 0%,
+    var(--pink-200) 19%,
+    var(--blue-200) 40%,
+    var(--yellow-200) 59%,
+    var(--pink-200) 81%,
+    var(--blue-200) 100%
+  );
 
   /* Spacing */
   --space-xxs: 0.4rem; /* 4px */
@@ -37,6 +79,8 @@
   --space-xl: 3.2rem; /* 32px */
   --space-2xl: 4.8rem; /* 48px */
   --space-3xl: 6.4rem; /* 48px */
+
+  --max-width: 1218px;
 
   /* Typography */
   --font-header: 'Co Headline', system-ui, sans-serif;
@@ -79,6 +123,11 @@
 }
 
 /********** CSS RESET ************/
+
+/* debugger */
+/* * {
+  outline: 1px solid red;
+} */
 
 *,
 *::before,
@@ -162,4 +211,9 @@ li {
   padding: 0;
   text-indent: 0;
   list-style-type: none;
+}
+
+a {
+  display: inline;
+  line-height: normal;
 }

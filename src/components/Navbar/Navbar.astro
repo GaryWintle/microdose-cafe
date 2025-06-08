@@ -3,11 +3,16 @@ import styles from "./Navbar.module.css";
 ---
 
 <nav class={styles.nav}>
-  <div>Logo</div>
-  <ul class={styles.navlinks}>
-    <li>About Microdosing</li>
-    <li>Menu</li>
-    <li>FAQs</li>
-    <li>Find Us!</li>
+<div class={styles.logo}>
+  <div class={styles.logoImage}><img src="public/images/mdc-logo-image.webp" alt="Microdose Cafe Logo"></div>
+
+  <div class={styles.logoText}><img src="public/images/mdc-logo-text.webp" alt="Microdose Cafe Logo"></div>
+  </div>
+
+  <ul class={styles.navLinks}>
+<li><a href="#about"><span>About Microdosing</span></a></li>
+    <li><a href="menu"><span>Menu</span></a></li>
+    <li><a href="faqs"><span>FAQs</span></a></li>
+    <li><a href="find-us"><span>Find Us!</span></a></li>
   </ul>
 </nav>
