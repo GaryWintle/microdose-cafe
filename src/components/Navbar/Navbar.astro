@@ -1,5 +1,6 @@
 ---
 import styles from "./Navbar.module.css";
+import CTAButton from '../../components/Buttons/CTAButton.astro';
 ---
 
 <nav class={styles.nav}>
@@ -13,6 +14,7 @@ import styles from "./Navbar.module.css";
 <li><a href="#about"><span>About Microdosing</span></a></li>
     <li><a href="menu"><span>Menu</span></a></li>
     <li><a href="faqs"><span>FAQs</span></a></li>
-    <li><a href="find-us"><span>Find Us!</span></a></li>
+    <li><CTAButton>Find Us!</CTAButton></li>
+    <!-- <li><a href="find-us"><span>Find Us!</span></a></li> -->
   </ul>
 </nav>
