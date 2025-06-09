@@ -1,6 +1,5 @@
 .hero {
   position: relative;
-  z-index: -2;
   display: flex;
   justify-content: center;
   align-items: center; /* vertical centering */
@@ -10,25 +9,57 @@
 }
 
 .hero video {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 80vh;
   object-fit: cover; /* important! */
   z-index: -1;
   pointer-events: none;
 }
 
 .container {
-  z-index: 1; /* make sure content appears above video */
-  width: min(70%, var(--max-width));
+  z-index: 1;
+  position: relative;
+  width: min(80%, var(--max-width));
   text-align: center;
 }
 
 h1 {
   font-family: var(--font-header);
-  font-size: var(--font-header-xl);
+  font-size: clamp(6rem, 4vw, 9rem);
   color: var(--neutral-100);
   line-height: var(--line-height-tight);
+  text-shadow:
+    1px 1px 0 var(--yellow-200),
+    2px 2px 0 var(--yellow-300),
+    0 2px 35px var(--neutral-800);
+}
+
+.desktopOnly {
+  display: block;
+}
+.mobileOnly {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .desktopOnly {
+    display: none;
+  }
+  .mobileOnly {
+    display: block;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
 }

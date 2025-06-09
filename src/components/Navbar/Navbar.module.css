@@ -78,6 +78,10 @@ nav::after {
 .navLinks li:nth-child(3n) a {
   color: var(--blue-150);
 }
+
+.navLinks li:last-child a {
+  color: var(--neutral-800);
+}
 /* .navLinks li:nth-child(4) a {
   color: var(--neutral-800);
   background-color: var(--yellow-200);

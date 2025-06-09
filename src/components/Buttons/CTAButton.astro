@@ -1,5 +1,11 @@
 ---
 import styles from "./CTAButton.module.css";
+const { href = "#",
+  size = "medium", // small | medium | large
+  color = "primary" // secondary
+ } = Astro.props;
+
+ const className = `${styles.CTAButton} ${styles[size]} ${styles[color]}`
 ---
 
-<button class={styles.CTAButton}><span><slot /></span></button>
+<a href={href} class={className}><span><slot /></span></a>

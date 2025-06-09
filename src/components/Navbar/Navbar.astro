@@ -1,20 +1,36 @@
 ---
 import styles from "./Navbar.module.css";
 import CTAButton from '../../components/Buttons/CTAButton.astro';
+import client from '../../lib/sanityClient.js';
+
+interface NavItem {
+  label: string;
+  url: string;
+}
+
+const navDoc = await client.fetch(`
+  *[_type == "navigation"][0]{
+    title,
+    items
+  }
+`);
+
+const navItems: NavItem[] = navDoc?.items || [];
 ---
 
 <nav class={styles.nav}>
-<div class={styles.logo}>
-  <div class={styles.logoImage}><img src="public/images/mdc-logo-image.webp" alt="Microdose Cafe Logo"></div>
-
-  <div class={styles.logoText}><img src="public/images/mdc-logo-text.webp" alt="Microdose Cafe Logo"></div>
+  <div class={styles.logo}>
+  <div class={styles.logoImage}>
+    <img src="/images/mdc-logo-image.webp" alt="Microdose Cafe Logo" /></div>
+  <div class={styles.logoText}>
+    <img src="/images/mdc-logo-text.webp" alt="Microdose Cafe Logo" />
   </div>
+</div>
 
   <ul class={styles.navLinks}>
-<li><a href="#about"><span>About Microdosing</span></a></li>
-    <li><a href="menu"><span>Menu</span></a></li>
-    <li><a href="faqs"><span>FAQs</span></a></li>
-    <li><CTAButton>Find Us!</CTAButton></li>
-    <!-- <li><a href="find-us"><span>Find Us!</span></a></li> -->
+    {navItems.map((item: NavItem) => (
+      <li><a href={item.url}><span>{item.label}</span></a></li>
+    ))}
+    <li><CTAButton href="/find-us">Find Us!</CTAButton></li>
   </ul>
 </nav>
