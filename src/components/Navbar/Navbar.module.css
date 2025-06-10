@@ -9,7 +9,7 @@ nav {
   border-radius: var(--border-radius-xl);
   align-items: center;
   justify-content: space-between;
-  background-image: url(../../../public/images/backgroundimage-noise-30.webp);
+  background-image: url(/images/backgroundimage-noise-30.webp);
   background-color: var(--neutral-800);
   backdrop-filter: blur(10px);
 }

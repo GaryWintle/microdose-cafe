@@ -1,16 +1,14 @@
 import { defineConfig } from 'astro/config';
-import sanityIntegration from '@sanity/astro';
 import react from '@astrojs/react';
+import netlify from '@astrojs/netlify';
+
+// REMOVE the import and usage of sanityIntegration
 
 export default defineConfig({
   output: 'server', // allows both static and client-side routes
+  adapter: netlify(),
   integrations: [
-    sanityIntegration({
-      projectId: 'pf4xqd3k',
-      dataset: 'production',
-      useCdn: true, // set false in dev if you want drafts
-      studioBasePath: '/admin', // optional, embeds your Studio
-    }),
+    // REMOVE sanityIntegration block completely
     react(),
   ],
 });

@@ -1,0 +1,15 @@
+---
+// Use hydration only where you animate
+import { fadeIn } from '../../lib/animations.js';
+---
+<section client:load>
+  <h2 id="headline">Cool animation</h2>
+
+  <script is:inline>
+    import { fadeIn } from '../../lib/animations.js';
+    window.addEventListener('DOMContentLoaded', () => {
+      const el = document.getElementById('headline');
+      fadeIn(el);
+    });
+  </script>
+</section>

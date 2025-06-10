@@ -4,6 +4,7 @@
   font-weight: var(--font-weight-bold);
   border-radius: var(--border-radius-xl);
   text-decoration: none;
+  position: relative;
   transition:
     color 0.5s ease,
     background-color 0.3s ease,
@@ -13,10 +14,10 @@
 .CTAButton:hover {
   color: var(--yellow-200);
   background-color: var(--neutral-800);
-  box-shadow:
+  /* box-shadow:
     inset 0 0 0 2px var(--yellow-200),
     2px 2px 10px var(--pink-200),
-    -2px -2px 10px var(--blue-200);
+    -2px -2px 10px var(--blue-200); */
   animation: link 2s linear infinite;
 }
 
@@ -40,7 +41,7 @@
 
 .primary {
   background-color: var(--yellow-200);
-  color: var(--neutral-800);
+  color: var(--pink-200);
 }
 
 .secondary {
@@ -49,7 +50,7 @@
 }
 
 span {
-  transform: translateY(0.2rem);
+  transform: translateY(0.3rem);
 }
 
 @keyframes link {

@@ -1,21 +1,7 @@
 ---
 import styles from "./Navbar.module.css";
-import CTAButton from '../../components/Buttons/CTAButton.astro';
-import client from '../../lib/sanityClient.js';
 
-interface NavItem {
-  label: string;
-  url: string;
-}
 
-const navDoc = await client.fetch(`
-  *[_type == "navigation"][0]{
-    title,
-    items
-  }
-`);
-
-const navItems: NavItem[] = navDoc?.items || [];
 ---
 
 <nav class={styles.nav}>
@@ -28,9 +14,9 @@ const navItems: NavItem[] = navDoc?.items || [];
 </div>
 
   <ul class={styles.navLinks}>
-    {navItems.map((item: NavItem) => (
-      <li><a href={item.url}><span>{item.label}</span></a></li>
-    ))}
-    <li><CTAButton href="/find-us">Find Us!</CTAButton></li>
+      <li><a href=#><span>About Microdosing</span></a></li>
+      <li><a href=#><span>Menu</span></a></li>
+      <li><a href=#><span>FAQs</span></a></li>
+      <li><a href=#><span>Find Us!</span></a></li>
   </ul>
 </nav>

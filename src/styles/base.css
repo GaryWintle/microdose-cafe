@@ -73,6 +73,17 @@
     var(--blue-200) 100%
   );
 
+  --gradient-conic-01: conic-gradient(
+    from 0deg,
+    var(--yellow-200),
+    var(--pink-200),
+    var(--blue-200),
+    var(--yellow-200),
+    var(--pink-200),
+    var(--blue-200),
+    var(--yellow-200)
+  );
+
   /* Spacing */
   --space-xxs: 0.4rem; /* 4px */
   --space-xs: 0.8rem; /* 8px */

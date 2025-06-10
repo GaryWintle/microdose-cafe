@@ -1,19 +1,20 @@
 ---
 import styles from "./Hero.module.css";
 import CTAButton from '../../components/Buttons/CTAButton.astro';
+
 ---
 
 
 <header class={styles.hero}>
 
   <video id="heroVideo" class={styles.desktopOnly} autoplay loop muted playsinline>
-    <source src="public/video/MDC-Hero.webm" type="video/webm" />
-    <source src="public/video/MDC-Hero.mp4" type="video/mp4" />
+    <source src="/video/MDC-Hero.webm" type="video/webm" />
+    <source src="/video/MDC-Hero.mp4" type="video/mp4" />
   </video>
   <img src="/video/MDC-Hero-backup.webp" alt="Background image" class={styles.mobileOnly} />
 
    <div class={styles.container}>
-    <h1>Brain Tonics and Psychedelic Elixers of all Kinds!</h1>
+    <h1 id="hero-title">Brain Tonics and Psychedelic Elixers of all Kinds!</h1>
     <p class={styles.subHeading}>We’re your friendly travel guide to a whole new world.</p>
     <CTAButton size="large" color="primary">Start you Trip Today!</CTAButton>
   </div>
@@ -25,5 +26,17 @@ import CTAButton from '../../components/Buttons/CTAButton.astro';
   if (video) {
     video.playbackRate = 0.9; // slow down here
   }
+</script>
+
+<script>
+  import { gsap } from "gsap";
+   const title = document.getElementById("hero-title");
+  console.log("using GSAP: ", gsap.version);
+  gsap.from(title, {
+          opacity: 0,
+          x: -100,
+          duration: 1,
+          ease: "power2.out"
+        });
 </script>
 
