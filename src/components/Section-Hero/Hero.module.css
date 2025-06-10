@@ -21,10 +21,13 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   z-index: 1;
-  position: relative;
+  /* position: relative; */
   width: min(80%, var(--max-width));
   text-align: center;
+  gap: 32px;
 }
 
 h1 {
@@ -36,6 +39,14 @@ h1 {
     1px 1px 0 var(--yellow-200),
     2px 2px 0 var(--yellow-300),
     0 2px 35px var(--neutral-800);
+}
+
+.subHeading {
+  font-family: var(--font-body);
+  font-size: var(--font-body-xl);
+  font-weight: var(--font-weight-normal);
+  color: var(--neutral-100);
+  text-shadow: 0 2px 35px var(--neutral-800);
 }
 
 .desktopOnly {

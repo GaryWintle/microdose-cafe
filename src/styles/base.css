@@ -5,7 +5,8 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: local('Co Headline Regular'),
+  src:
+    local('Co Headline Regular'),
     url('/fonts/CoHeadline/Co Headline.woff') format('woff');
 }
 
@@ -14,7 +15,8 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  src: local('Co Headline Light'),
+  src:
+    local('Co Headline Light'),
     url('/fonts/CoHeadline/Co Headline Light.woff') format('woff');
 }
 
@@ -23,7 +25,8 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: local('Co Headline Bold'),
+  src:
+    local('Co Headline Bold'),
     url('/fonts/CoHeadline/Co Headline Bold.woff') format('woff');
 }
 
@@ -99,7 +102,7 @@
 
   /* Font weights */
   --font-weight-light: 300;
-  --font-weight-normal: 400;
+  --font-weight-normal: 500;
   --font-weight-bold: 700;
 
   /* Line heights */
@@ -114,12 +117,12 @@
   --border-radius-xl: 50px;
 
   /* Drop Shadows */
-  --shadow-shallow: 0 1px 2px hsla(0, 24%, 8%, 0.2),
-    0 1px 3px hsla(0, 24%, 8%, 0.2);
-  --shadow-mid: 0 3px 6px hsla(0, 24%, 8%, 0.2),
-    0 10px 20px hsla(0, 24%, 8%, 0.2);
-  --shadow-deep: 0 3px 10px hsla(0, 24%, 8%, 0.2),
-    0 5px 40px hsla(0, 24%, 8%, 0.2);
+  --shadow-shallow:
+    0 1px 2px hsla(0, 24%, 8%, 0.2), 0 1px 3px hsla(0, 24%, 8%, 0.2);
+  --shadow-mid:
+    0 3px 6px hsla(0, 24%, 8%, 0.2), 0 10px 20px hsla(0, 24%, 8%, 0.2);
+  --shadow-deep:
+    0 3px 10px hsla(0, 24%, 8%, 0.2), 0 5px 40px hsla(0, 24%, 8%, 0.2);
 }
 
 /* ********* CSS RESET *********** */

@@ -1,8 +1,8 @@
 ---
 import styles from "./CTAButton.module.css";
 const { href = "#",
-  size = "medium", // small | medium | large
-  color = "primary" // secondary
+  size = "large", // small | medium | large
+  color = "primary" // primary | secondary
  } = Astro.props;
 
  const className = `${styles.CTAButton} ${styles[size]} ${styles[color]}`
