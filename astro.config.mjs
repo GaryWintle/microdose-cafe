@@ -7,8 +7,5 @@ import netlify from '@astrojs/netlify';
 export default defineConfig({
   output: 'server', // allows both static and client-side routes
   adapter: netlify(),
-  integrations: [
-    // REMOVE sanityIntegration block completely
-    react(),
-  ],
+  integrations: [react()],
 });
